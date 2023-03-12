@@ -48,6 +48,16 @@
   {% endfor %}
 </article>
 
+{% if blog.comments_enabled %}
+  <div class="my-8" id="comments">
+    {% if article.comments_count > 0 %}
+        {% form 'new_comment' %}
+      {% else %}
+        There are NO comment!
+    {% endif %}
+  </div>
+{% endif %}
+
 
 
 {% schema %}
