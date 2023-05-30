@@ -19,7 +19,7 @@
 
       <!-- NAVIGATION MENU Desktop -->
       <nav class="hidden md:flex space-x-10">
-        {% for link in linklists.main-menu.links %}
+        {% for link in linklists.example-menu.links %}
           {% if link.links != blank %}
             {% assign link_handle = link.handle | replace: '-', '_' %}
             <div class="relative" x-data="{ {{link_handle}} : false}">
@@ -100,7 +100,7 @@
         <!-- NAVIGATION LINKS FOR MOBILE MENU -->
         <div class="pt-3">
           <nav class="grid gap-y-7">
-            {% for link in linklists.main-menu.links %}
+            {% for link in linklists.example-menu.links %}
               {% assign link_handle = link.handle | replace: '-', '_' %}
               {% if link.links != blank %}
                 <div x-data="{ {{link_handle}} : false }" class="relative">
